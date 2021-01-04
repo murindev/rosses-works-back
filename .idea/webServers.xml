@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6c0bead8-2e33-4fdd-a16a-4132e4663f67" name="rosses.back">
+        <fileTransfer rootFolder="/var/www/rosses.back" accessType="SFTP" host="45.141.100.134" port="22" sshConfigId="24ad6ebd-3cdb-4cad-9868-f25216ae51e2" sshConfig="ruVds">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
