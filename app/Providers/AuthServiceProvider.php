@@ -25,6 +25,12 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+/*        Gate::define('laravel-websockets', function ($user = null) {
+            return in_array($user->email, [
+                //
+            ]);
+        });*/
+
         //
     }
 }
