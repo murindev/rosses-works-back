@@ -79,6 +79,8 @@ Route::group([
         $ctr = \App\Http\Controllers\AssistantController::class;
         Route::post('assistant', [$ctr, 'index']);
     });
+
+
 });
 
 Route::group([
@@ -118,7 +120,5 @@ Route::group([
     Route::post('/simplePrivate', [$ctr, 'privateEvent']);
 });
 
-
-
-
-include_once(base_path().'/CRM/Routes/api.php');
+/** @noinspection PhpIncludeInspection */
+include_once app_path('/Modules/CRM/Routes/api.php');

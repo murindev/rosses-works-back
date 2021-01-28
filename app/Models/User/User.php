@@ -70,6 +70,10 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
  * @property-read int|null $user_roles_count
  * @method static \Illuminate\Database\Eloquent\Builder|User whereBanned($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRankId($value)
+ * @property int|null $crm_id
+ * @property string|null $surname
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereCrmId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereSurname($value)
  */
 class User extends Authenticatable implements JWTSubject
 {

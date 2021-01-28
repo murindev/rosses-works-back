@@ -83,7 +83,7 @@ return [
             ]) : [],
         ],
 
-        'mysqlSRM' => [
+        'mysqlCRM' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('CRM_DB_HOST', '127.0.0.1'),

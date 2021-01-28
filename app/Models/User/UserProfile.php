@@ -73,6 +73,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User\UserProfileEducation[] $education
  * @property-read int|null $education_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User\UserProfileEmployment[] $employments
+ * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereMaritalStatus($value)
  */
 class UserProfile extends Model
 {
