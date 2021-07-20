@@ -18,9 +18,6 @@ class ProfileController extends Controller
     const TELEGRAM_TOKEN = '1573439744:AAGcK8NBsLcjTjHMmdIIWJG0fDkZVTk5Umg';
     const TELEGRAM_CHATID = '-1001440877537';
 
-//define('TELEGRAM_TOKEN', '1573439744:AAGcK8NBsLcjTjHMmdIIWJG0fDkZVTk5Umg');
-//define('TELEGRAM_CHATID', '-1001440877537');
-
     public function show()
     {
         return UserProfile::whereUserId(auth()->user()->id)->with('education', 'employments')->first();
@@ -56,7 +53,6 @@ class ProfileController extends Controller
             file_get_contents($request->file('photo')->getRealPath())
         );
     }
-    // https://api.telegram.org/bot1573439744:AAGcK8NBsLcjTjHMmdIIWJG0fDkZVTk5Umg/getUpdates
 
     public function destroy($id,$field)
     {
@@ -88,8 +84,6 @@ class ProfileController extends Controller
 
         $user = User::whereId(auth()->user()->id)->first();
 
-//        define('TELEGRAM_TOKEN', '1573439744:AAGcK8NBsLcjTjHMmdIIWJG0fDkZVTk5Umg');
-//        define('TELEGRAM_CHATID', '-1001440877537');
         $this->telegramMessage('Кандидат '.$user->name.' '.$user->surname.'  обновил профиль  <a href="http://194.87.232.56">ссылка на профиль</a>');
 
     }

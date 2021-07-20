@@ -12,11 +12,6 @@ class MessageController extends Controller
     public function index(Request $request){
         $message = $request->input('message');
 
-//        MessageSend::broadcast($message);
-//        return $message;
-
-
-
         if (strlen($message)) {
             event(new MessageSend($message));
         }

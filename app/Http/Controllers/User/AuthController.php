@@ -214,9 +214,6 @@ class AuthController extends Controller
         $collection->put('role',UserRole::where('id',(int)$user->roles[0])->first());
         $collection->put('rank',UserRank::where('id',(int)$user->rank_id)->first());
 
-
-
-
         return $collection;
 
     }
@@ -232,10 +229,6 @@ class AuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     protected function createNewToken($token){
-
-
-
-// User::with(['userRoles','userRank'])->where('id',auth()->user()->id)->first()
 
         return response()->json([
             'access_token' => $token,

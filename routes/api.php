@@ -17,9 +17,6 @@ use App\Http\Controllers\User\AuthController;
 */
 
 
-
-
-
 Route::group([
     'middleware' => 'api',
     'prefix' => 'auth'
@@ -36,7 +33,6 @@ Route::group([
 
 Route::group([
     'middleware' => 'auth:api',
-//    'prefix' => 'user'
 ], function ($router) {
 
     Route::group([], function () {
@@ -85,7 +81,6 @@ Route::group([
 
 Route::group([
     'middleware' => 'auth:api',
-//    'prefix' => 'helper'
 ], function ($router) {
     Route::group([], function () {
         $ctr = \App\Http\Controllers\Helpers\HelperRegionController::class;
@@ -121,4 +116,4 @@ Route::group([
 });
 
 /** @noinspection PhpIncludeInspection */
-include_once app_path('/Modules/CRM/Routes/api.php');
+include_once base_path('/routes/api/crm.php');
